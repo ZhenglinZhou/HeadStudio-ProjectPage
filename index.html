@@ -11,7 +11,7 @@
   <!-- model viewer -->
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
   <title>
-    HyperDreamer
+    HeadStudio
   </title>
   <!-- <link rel="icon" href="icon.ico"> -->
 </head>
@@ -60,19 +60,19 @@
 
 
     <!-- abstract -->
-    <p class="title is-3 mt-5 has-text-centered"> Abstract </p>
-    <p class="content is-size-6 has-text-left">
-    <img src="images/teaser.png" height="150%" style="margin-left: auto;margin-right: auto;display: block;"/></p>
-    <p align="left">
-      Creating digital avatars from textual prompts has long been a desirable yet challenging task.
-      Despite the promising outcomes obtained through 2D diffusion priors in recent works, current methods face challenges in achieving high-quality and animated avatars effectively.
-      In this paper, we present <strong><em>HeadStudio</em></strong>, a novel framework that utilizes 3D Gaussian splatting to generate realistic and animated avatars from text prompts.
-      Our method drives 3D Gaussians semantically to create a flexible and achievable appearance through the intermediate FLAME representation.
-      Specifically, we incorporate the FLAME into both 3D representation and score distillation:
-      <b>1) FLAME-based 3D Gaussian splatting</b>, driving 3D Gaussian points by rigging each point to a FLAME mesh.
-      <b>2) FLAME-based score distillation sampling</b>, utilizing FLAME-based fine-grained control signal to guide score distillation from the text prompt.
-      Extensive experiments demonstrate the efficacy of <strong><em>HeadStudio</em></strong> in generating animatable avatars from textual prompts, exhibiting visually appealing appearances.
-    </p>
+<!--    <p class="title is-3 mt-5 has-text-centered"> Abstract </p>-->
+<!--    <p class="content is-size-6 has-text-left">-->
+<!--    <img src="images/teaser.png" height="150%" style="margin-left: auto;margin-right: auto;display: block;"/></p>-->
+<!--    <p align="left">-->
+<!--      Creating digital avatars from textual prompts has long been a desirable yet challenging task.-->
+<!--      Despite the promising outcomes obtained through 2D diffusion priors in recent works, current methods face challenges in achieving high-quality and animated avatars effectively.-->
+<!--      In this paper, we present <strong><em>HeadStudio</em></strong>, a novel framework that utilizes 3D Gaussian splatting to generate realistic and animated avatars from text prompts.-->
+<!--      Our method drives 3D Gaussians semantically to create a flexible and achievable appearance through the intermediate FLAME representation.-->
+<!--      Specifically, we incorporate the FLAME into both 3D representation and score distillation:-->
+<!--      <b>1) FLAME-based 3D Gaussian splatting</b>, driving 3D Gaussian points by rigging each point to a FLAME mesh.-->
+<!--      <b>2) FLAME-based score distillation sampling</b>, utilizing FLAME-based fine-grained control signal to guide score distillation from the text prompt.-->
+<!--      Extensive experiments demonstrate the efficacy of <strong><em>HeadStudio</em></strong> in generating animatable avatars from textual prompts, exhibiting visually appealing appearances.-->
+<!--    </p>-->
 
 
     <!-- results (videos) -->
@@ -90,41 +90,35 @@
     Furthermore, we also introduce additional enhancements, including uniform super-resolution and mesh regularization in F-3DGS, training with animation and denoised score distillation in F-SDS.
     </p>
 
-<!--    <p class="title is-3 mt-5 has-text-centered"> Single-Image Generation </p>-->
-<!--    <video muted autoplay loop> <source src="videos/single_3D_1.mp4" type="video/mp4"> </video>-->
-<!--    <video muted autoplay loop> <source src="videos/single_3D_2.mp4" type="video/mp4"> </video>-->
-<!--    &lt;!&ndash; <img src="images/fig_only.png" height="150%" style="margin-left: auto;margin-right: auto;display: block;"/></p> &ndash;&gt;-->
-<!--    &lt;!&ndash; <video muted autoplay loop> <source src="videos/image1.mp4" type="video/mp4"> </video>-->
-<!--    <video muted autoplay loop> <source src="videos/image2.mp4" type="video/mp4"> </video> &ndash;&gt;-->
+    <p class="title is-3 mt-5 has-text-centered"> Text to Static Avatar Generation </p>
+    <p class="content has-text-centered is-size-5">
+    Comparison with the text to static avatar generation methods.
+    HeadStudio excels at producing high-fidelity head avatars, yielding superior results.
+    </p>
+    <video muted autoplay loop> <source src="videos/static_comparision.mp4" type="video/mp4"> </video>
 
-<!--    <p class="title is-3 mt-5 has-text-centered"> Relighting </p>-->
-<!--    <video muted autoplay loop> <source src="videos/relighting_rgb.mp4" type="video/mp4"> </video>-->
-
-<!--    <p class="title is-3 mt-5 has-text-centered"> Interactive Editing  </p>-->
-<!--    <p class="content has-text-centered is-size-5">-->
-<!--      For a generated model or their own data, users can interactively select any region via a few clicks-->
-<!--      and efficiently edit the texture with text-based guidance.-->
-<!--    </p>-->
-<!--    <video muted autoplay loop> <source src="videos/editing1.mp4" type="video/mp4"> </video>-->
-<!--    <video muted autoplay loop> <source src="videos/editing2.mp4" type="video/mp4"> </video>-->
-<!--    <video muted autoplay loop> <source src="videos/editing3.mp4" type="video/mp4"> </video>-->
+    <p class="title is-3 mt-5 has-text-centered"> Text to Dynamic Avatar Generation </p>
+    <p class="content has-text-centered is-size-5">
+    Comparison with the text to dynamic avatar generation methods.
+    HeadStudio provides effective semantic alignment, smooth expression deformation, and real-time rendering.
+    </p>
+    <video muted autoplay loop> <source src="videos/dynamic_comparision.mp4" type="video/mp4"> </video>
 
 
-
-    <!-- citation -->
-<!--    <div class="card mt-4">-->
-<!--      <header class="card-header">-->
-<!--        <p class="card-header-title"> Citation </p>-->
-<!--      </header>-->
-<!--      <div class="card-content is-size-5 has-text-left">-->
-<!--<pre><code>@InProceedings{wu2023hyperdreamer,-->
-<!--  author = {Tong Wu, Zhibing Li, Shuai Yang, Pan Zhang, Xingang Pan, Jiaqi Wang, Dahua Lin, Ziwei Liu},-->
-<!--  title = {HyperDreamer: Hyper-Realistic 3D Content Generation and Editing from a Single Image},-->
-<!--  journal={ACM SIGGRAPH Asia 2023 Conference Proceedings},-->
-<!--  year={2023}-->
-<!--}</code></pre>-->
-<!--      </div>-->
-<!--    </div>-->
+<!--     citation-->
+    <div class="card mt-4">
+      <header class="card-header">
+        <p class="card-header-title"> Citation </p>
+      </header>
+      <div class="card-content is-size-5 has-text-left">
+<pre><code>@article{zhou2024headstudio,
+  author = {Zhenglin Zhou, Fan Ma, Hehe Fan, Yi Yang},
+  title = {HeadStudio: Text to Animatable Head Avatars with 3D Gaussian Splatting},
+  journal={arXiv preprint},
+  year={2024}
+}</code></pre>
+      </div>
+    </div>
 
 
   </div>
